@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Picture Change</title>
+  </head>
+  <body>
+    <div class="container" data-use="pixelate">
+      <header class="header">
+        <h4>ادغام پیکسل</h4>
+        <label for="mycheckbox" class="checkbox">
+          <input
+            type="checkbox"
+            class="checkbox__input"
+            checked
+            id="mycheckbox"
+          />
+          <span class="checkbox__fill"></span>
+        </label>
+        <h4>شمارش شبکه ها</h4>
+      </header>
+
+      <main class="main">
+        <section class="setting">
+          <div class="chose-image">
+            <label class="btn" for="file-upload">
+              انتخاب عکس
+              <input type="file" id="file-upload" />
+            </label>
+          </div>
+
+          <div class="image-detail hide">
+            <span>اندازه عکس:</span>
+            <span class="image-size" style="text-align: right"></span>
+          </div>
+          <div class="item hide">
+            <h4 class="titr">حالت ادغام:</h4>
+            <div class="radio">
+              <input
+                type="radio"
+                class="radio__input"
+                value="express"
+                name="myRadio"
+                id="myRadio1"
+                checked
+              />
+              <label class="radio__lable" for="myRadio1">پیکسل</label>
+              <input
+                type="radio"
+                class="radio__input"
+                value="full"
+                name="myRadio"
+                id="myRadio2"
+              />
+              <label class="radio__lable" for="myRadio2">شبکه</label>
+
+              <div class="item__num item-pixel">
+                <label for="pixel-number">
+                  تعداد پیکسل
+                  <input type="number" min="2" value="4" id="pixel-number" />
+                </label>
+              </div>
+              <div class="item__num item-pice">
+                <label for="grid-x">
+                  شبکه طولی
+                  <input type="number" min="2" value="20" id="grid-x" />
+                </label>
+              </div>
+              <div class="item__num item-pice">
+                <label for="grid-y">
+                  شبکه عرضی
+                  <input type="number" min="2" value="10" id="grid-y" />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="button hide">
+            <button class="btn" id="btn">اعمال تغییرات</button>
+          </div>
+
+          <div class="result-grid hide"></div>
+        </section>
+        <section class="image-preview"></section>
+      </main>
+      <div class="table-result"></div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
